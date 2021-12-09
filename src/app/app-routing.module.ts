@@ -5,7 +5,11 @@ import { ErrorPageComponent } from './shared/error-page/error-page.component';
 const routes:Routes = [
   {
     path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then( m  => m.AuthModule)
+    loadChildren: () => import('./auth/auth.module').then( (m) => m.AuthModule ),
+  },
+  {
+    path: 'personajes',
+    loadChildren: () => import('./personajes/personajes.module').then( (m) => m.PersonajesModule ),
   },
   {
     path: '404',
