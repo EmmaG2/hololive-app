@@ -1,16 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { Vtuber } from '../../interfaces/hololive.interface';
+import { VtubersService } from '../../services/vtubers.service';
 
 @Component({
   selector: 'app-listado',
-  templateUrl: './listado.component.html',
-  styles: [
-  ]
+  templateUrl: './listado.component.html'
 })
 export class ListadoComponent implements OnInit {
+  vtubers: Vtuber[] = [];
 
-  constructor() { }
+  constructor(private vtubersService: VtubersService) {}
 
   ngOnInit(): void {
+    this.vtubersService
+      .getPersonajes()
+      .subscribe((vtuber) => (this.vtubers = vtuber));
   }
-
 }
