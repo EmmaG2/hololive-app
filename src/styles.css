@@ -9,3 +9,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 button:hover {
   background-color: #db417c86;
 }
+
+mat-card {
+  margin-top: 20px;
+}
