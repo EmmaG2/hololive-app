@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      {{ pers.vtuber.name.en }}
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{ pers.vtuber.name.jp }}
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <img mat-card-image src="assets/vtubers/{{ pers.id }}.jpg"
+    alt="{{pers.vtuber.name.en}} {{pers.vtuber.name.jp}} {{pers.publisher}}">
+
+  <mat-card-content>
+    <h3>{{pers.publisher}}</h3>
+    <p>{{pers.generation}}</p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-button>
+      <span>Leer más...</span>
+    </button>
+    <button mat-button>
+      <span>Editar</span>
+    </button>
+  </mat-card-actions>
+
+</mat-card>
