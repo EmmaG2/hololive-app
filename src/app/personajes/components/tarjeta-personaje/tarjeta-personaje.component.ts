@@ -5,10 +5,13 @@ import { Vtuber } from '../../interfaces/hololive.interface';
   selector: 'app-tarjeta-personaje',
   templateUrl: './tarjeta-personaje.component.html',
   styles: [
-  ]
+    `
+      button:hover {
+        background-color: #c2185b;
+      }
+    `,
+  ],
 })
-export class TarjetaPersonajeComponent   {
-
-  @Input() pers!:Vtuber;
-
+export class TarjetaPersonajeComponent {
+  @Input() pers!: Vtuber;
 }
