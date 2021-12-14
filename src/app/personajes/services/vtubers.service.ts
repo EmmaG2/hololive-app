@@ -12,6 +12,10 @@ export class VtubersService {
 
   getPersonajes():Observable<Vtuber[]> {
     return this.http.get<Vtuber[]>('http://localhost:3000/personajes');
+  };
+
+  getPersonajePorId( id:Vtuber ):Observable<Vtuber> {
+    return this.http.get<Vtuber>(`http://localhost:3000/personajes/${id}`);
   }
 
 }
