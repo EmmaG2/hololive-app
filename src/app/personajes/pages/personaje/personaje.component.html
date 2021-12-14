@@ -1,1 +1,37 @@
-<p>personaje works!</p>
+<mat-grid-list cols="1"
+               *ngIf="!pers; else divHeroe">
+  <mat-grid-tile>
+    <mat-spinner></mat-spinner>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<ng-template #divHeroe>
+
+  <main fxLayout="row"
+        fxLayout.xs="column"
+        fxLayoutGap="30px">
+        <section fxFlex="50">
+          <h1>{{pers.vtuber.name.en}} - {{pers.vtuber.name.jp}}</h1>
+          <mat-divider></mat-divider>
+          <br>
+          <img mat-card-image [src]="pers | imagenes">
+        </section>
+        <aside fxFlex="50">
+          <h1>{{ pers.publisher }}</h1>
+          <mat-divider></mat-divider>
+
+          <mat-list>
+            <mat-list-item><span>Nombre en inglés: {{pers.vtuber.name.en}}</span></mat-list-item>
+            <mat-list-item><span>Nombre en japonés: {{pers.vtuber.name.jp}}</span></mat-list-item>
+            <mat-list-item><span>Empresa: {{pers.publisher}}</span></mat-list-item>
+            <mat-list-item><span>Generación: {{pers.publisher}}</span></mat-list-item>
+          </mat-list>
+          <button mat-button
+                  (click)="regresar()">
+            <span>Regresar</span>
+          </button>
+        </aside>
+
+  </main>
+
+</ng-template>
