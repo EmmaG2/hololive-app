@@ -17,8 +17,7 @@ import { PersonajeComponent } from './pages/personaje/personaje.component';
 import { PersonajesHomeComponent } from './pages/personajes-home/personajes-home.component';
 import { TarjetaPersonajeComponent } from './components/tarjeta-personaje/tarjeta-personaje.component';
 import { FooterComponent } from './components/footer/footer.component';
-
-
+import { ImagenesPipe } from './pipes/imagenes.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +27,8 @@ import { FooterComponent } from './components/footer/footer.component';
     PersonajeComponent,
     PersonajesHomeComponent,
     TarjetaPersonajeComponent,
-    FooterComponent
+    FooterComponent,
+    ImagenesPipe
   ],
   imports: [
     CommonModule,
