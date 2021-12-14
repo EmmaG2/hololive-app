@@ -1,0 +1,10 @@
+img {
+  width: 100%;
+  border-radius: 5px;
+}
+h1 {
+  font-size: 22px;
+}
+button:hover {
+  background-color: #c2185b;
+}

@@ -4,7 +4,8 @@ import { VtubersService } from '../../services/vtubers.service';
 
 @Component({
   selector: 'app-listado',
-  templateUrl: './listado.component.html'
+  templateUrl: './listado.component.html',
+  styleUrls: ['./listado.component.css']
 })
 export class ListadoComponent implements OnInit {
   vtubers: Vtuber[] = [];
