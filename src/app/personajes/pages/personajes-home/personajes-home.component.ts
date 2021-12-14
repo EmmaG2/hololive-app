@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
       .container {
         margin: 10px;
       }
+      button:hover {
+        background-color: #db417c86;
+      }
     `,
   ],
 })
