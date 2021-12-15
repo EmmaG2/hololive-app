@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 //? Modulos
+import { FormsModule } from '@angular/forms';
 import { personajesRoutingModule } from './personajes-routing.module';
 import { MaterialModule } from '../material/material.module';
 
@@ -34,6 +35,7 @@ import { ImagenesPipe } from './pipes/imagenes.pipe';
     CommonModule,
     FlexLayoutModule,
     personajesRoutingModule,
+    FormsModule,
     MaterialModule
   ]
 })
