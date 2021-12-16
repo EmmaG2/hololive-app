@@ -34,5 +34,9 @@
     <!-- <pre>{{personajeSeleccionado | json}}</pre> -->
     <app-tarjeta-personaje [pers]="personajeSeleccionado" ></app-tarjeta-personaje>
   </div>
+  <div fxLayoutAlign="center"
+       *ngIf="condicion">
+    <h2>No se encontró el personaje el personaje solicitado en la base de datos</h2>
+  </div>
 
 </main>

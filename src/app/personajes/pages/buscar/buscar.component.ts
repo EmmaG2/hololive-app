@@ -13,6 +13,7 @@ export class BuscarComponent implements OnInit {
   termino: string = '';
   dosb: Vtuber[] = [];
   personajeSeleccionado?:Vtuber | undefined;
+  condicion:boolean = false;
 
   constructor(private vtubersService: VtubersService) {}
 
@@ -27,6 +28,8 @@ export class BuscarComponent implements OnInit {
   opcionSeleccionada(event: MatAutocompleteSelectedEvent) {
 
     if (!event.option.value) {
+      this.personajeSeleccionado = undefined;
+      this.condicion = true;
       return;
     }
 
